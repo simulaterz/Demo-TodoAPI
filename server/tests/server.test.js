@@ -14,7 +14,7 @@ describe('POST /todos', () => {
 
         request(app)
             .post('/todos')
-            .send({text: text}) // supertest convert obj to json
+            .send({text: text}) // supertest auto convert obj to json
             .expect(200)
             .expect((res) => {
                 expect(res.body.text).toBe(text);
